@@ -1,9 +1,14 @@
 'use strict';
 
-// Call this function when the page loads (the "ready" event)
-$(document).ready(function() {
-	initializePage();
-})
+
+
+
+// function changeName() {
+// 	let names = document.getElementById("Names");
+// 	names.innerHTML = anagramedName(names);
+// }
+
+// addEventListener('click', changeName);
 
 /*
  * Function that is called when the document is ready.
@@ -42,5 +47,16 @@ function anagrammedName(name) {
 	else {
 		console.log(name + " not known for anagramming.");
 		return name;
+	}	
+}
+
+$(document).ready(function() {
+	 $("a.updating").click(friends);
+	  e.preventDefault();
 	}
+   )
+
+function friends(e) {
+	e.preventDefault();
+	$(this).text(anagrammedName($(this).text()));
 }
